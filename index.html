@@ -5,34 +5,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Subdomein - HowToHack</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Algemeen reset en styling */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            box-sizing: border-box;
         }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            flex-direction: column;
+            animation: fadeInBody 1.5s ease-out;
+        }
+
+        /* Animatie voor de inlading van de body */
+        @keyframes fadeInBody {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Header */
         header {
-            background-color: #1e7e34;
-            color: white;
-            padding: 20px;
             text-align: center;
+            padding: 40px;
+            background: linear-gradient(45deg, #2a3d66, #1c2b44);
+            border-radius: 10px;
+            width: 80%;
+            margin-top: 0;
+            opacity: 0;
+            animation: fadeInHeader 2s forwards;
         }
+
+        @keyframes fadeInHeader {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header h1 {
+            font-size: 3em;
+            letter-spacing: 1px;
+            color: #ffffff;
+        }
+
+        /* Sectie met tekst */
         section {
-            padding: 20px;
+            text-align: center;
+            padding: 40px;
+            width: 80%;
+            margin-top: 30px;
+            border-radius: 10px;
+            background-color: #1f1f1f;
+            opacity: 0;
+            animation: fadeInSection 2s 1s forwards;
         }
+
+        @keyframes fadeInSection {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            font-size: 2.5em;
+            color: #00aaff;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInText 1.5s 1.5s forwards;
+        }
+
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        p {
+            font-size: 1.3em;
+            line-height: 1.6;
+            color: #ccc;
+            margin-top: 15px;
+            opacity: 0;
+            animation: fadeInText 1.5s 2s forwards;
+        }
+
+        /* Footer */
         footer {
             text-align: center;
-            padding: 10px;
-            background-color: #1e7e34;
+            padding: 20px;
+            margin-top: 30px;
+            background: #2a3d66;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            opacity: 0;
+            animation: fadeInFooter 2s 2.5s forwards;
+        }
+
+        @keyframes fadeInFooter {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        footer p {
             color: white;
+            font-size: 1.1em;
         }
-        h2 {
-            color: #1e7e34;
+
+        /* Responsiviteit */
+        @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            section {
+                padding: 30px;
+            }
         }
-        p {
-            line-height: 1.6;
-        }
+
     </style>
 </head>
 <body>
@@ -43,9 +164,9 @@
 
     <section>
         <h2>Waarom hebben we deze site?</h2>
-        <p>Deze subdomein is opgezet om verschillende elementen van HowToHack.nl te testen en verbeteren. We experimenteren hier met verschillende opmaken, designs en functionaliteiten om te kijken wat het beste werkt voor onze gebruikers.</p>
-        <p>Door middel van dit testplatform kunnen we nieuwe ideeën en wijzigingen doorvoeren, en de gebruikerservaring verbeteren. Alles wat we testen op deze subdomein heeft als doel HowToHack.nl naar een hoger niveau te tillen.</p>
-        <p>Bezoek regelmatig om te zien hoe we HTH blijven verbeteren!</p>
+        <p>Deze subdomein is opgezet om verschillende elementen van HowToHack.nl te testen en te verbeteren. Hier experimenteren we met nieuwe opmaken, animaties en functies om de gebruikerservaring te verbeteren.</p>
+        <p>Door middel van dit testplatform kunnen we continue verbeteringen doorvoeren en optimaal reageren op de feedback van onze bezoekers. Dit is jouw kans om een kijkje te nemen in de toekomst van HowToHack.nl!</p>
+        <p>Bezoek regelmatig om nieuwe innovaties en verbeteringen te ontdekken!</p>
     </section>
 
     <footer>
